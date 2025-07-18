@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopping Cart</title>
+</head>
+<body>
+  <h2>Product List</h2>
+
+  <input type="text" id="productName" placeholder="Product name">
+  <input type="number" id="productPrice" placeholder="Price">
+  <button onclick="addToCart()">Add to Cart</button>
+
+  <h3>Shopping Cart</h3>
+  <ul id="cartList"></ul>
+  <p><strong>Total:</strong> $<span id="totalPrice">0</span></p>
+
+  <script>
+    let total = 0;
+
+    function addToCart() {
+      const name = document.getElementById("productName").value;
+      const price = parseFloat(document.getElementById("productPrice").value);
+
+      if (name && !isNaN(price)) {
+        const li = document.createElement("li");
+        li.textContent = `${name} - $${price.toFixed(2)}`;
+
+        li.addEventListener("click", () => {
+          total -= price;
+          document.getElementById("totalPrice").textContent = total.toFixed(2);
+          li.remove();
+        });
+
+        document.getElementById("cartList").appendChild(li);
+
+        total += price;
+        document.getElementById("totalPrice").textContent = total.toFixed(2);
+
+        // Reset inputs
+        document.getElementById("productName").value = "";
+        document.getElementById("productPrice").value = "";
+      }
+    }
+  </script>
+</body>
+</html>
