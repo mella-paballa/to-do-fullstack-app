@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emoji Mood Tracker</title>
+</head>
+<body>
+  <h2>How are you feeling today?</h2>
+
+  <label for="mood">Choose mood:</label>
+  <select id="mood">
+    <option value="😀">😀 Happy</option>
+    <option value="😔">😔 Sad</option>
+    <option value="😡">😡 Angry</option>
+    <option value="😰">😰 Anxious</option>
+    <option value="😴">😴 Tired</option>
+    <option value="❤">💘 Loved</option>
+    <option value="☺"> ☺ Calm</option>
+    
+  </select>
+
+  <br><br>
+  <input type="text" id="note" placeholder="Add a note (optional)" />
+  <button onclick="addMood()">Add Mood</button>
+
+  <ul id="moodList"></ul>
+
+  <script src="mood.js"></script>
+</body>
+</html>
+
+

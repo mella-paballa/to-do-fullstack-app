@@ -1,0 +1,88 @@
+
+
+let fruit = "apple"
+function pickFruit() {
+
+console.log(fruit)
+
+}
+
+
+const anime = ["naruto", "onePiece", "Bleach"];
+
+function favAnime() {
+        return anime[2];
+}
+
+
+console.log(favAnime());
+
+
+let levels = ["Easy", "Normal", "Difficult", "?"];
+
+function whatLvl() {
+ levels[3] = "God-Mode";
+  return levels; 
+
+}
+
+
+const recipe = ["adobo recipe", "Chicken Curry", "blood stew"];
+
+function addRecipe(sinigang) {
+
+recipe.push(sinigang);
+return recipe;
+
+}
+
+console.log(addRecipe("Mechado"));
+
+
+let coins = 5;
+
+function collecCoin(1) {
+
+coins--;
+return coins;
+
+}
+
+console.log(collecCoin());
+
+let age = 17;
+function enterClub() {
+
+if (age >= 18){
+return "Let's Party!"
+
+} else {
+
+   return "Ooop! Go back to mama!";
+
+}
+
+}
+
+
+
+
+--------------------
+Virtual Vending Machine
+
+let soldCount = 0;
+let snacks = ["pringles", "cheetos", "Sandwich"];
+function buySnack (snackIndex) {
+
+if (snackIndex >= 0 && snackIndex < snacks.length){
+console.log(You bought ${snacks[snackIndex]}!)
+snacks.splice(snackIndex, 1);
+soldCount++;
+return Total number sold: ${soldCount}
+
+} else {
+
+return "invalid snack index";
+
+}
+}

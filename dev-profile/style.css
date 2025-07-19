@@ -1,0 +1,71 @@
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+}
+
+.bg-gif {
+  background: url('assets/orange.gif') no-repeat center center fixed;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+ 
+}
+
+.glass {
+  
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* SIDEBAR */
+.sidebar .nav-link:hover {
+  
+  border-radius: 8px;
+}
+
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent if using GIF bg */
+  position: fixed;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+}
+
+.typewriter {
+  font-family: monospace;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.8s infinite;
+  color: white;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
